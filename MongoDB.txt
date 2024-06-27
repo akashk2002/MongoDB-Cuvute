@@ -1,0 +1,25 @@
+/*
+Database(DB) : Permanent Storage 
+        - Two Types:
+            1.SQL (Relational DB)
+                Table and Row Format
+                Eg: MySql, SQLite, Etc..
+            2. No SQL (Non Relational Database)
+                Collections and Document format
+                Eg: MongoDB, AWS DynamoDB, etc
+    
+    MERN : 
+        MongoDB - No SQL Database
+        Express.js(Framework) - Backend Javascript Framework
+        ReactJS - 
+        NodeJS - Javascript Library
+
+MongoDB
+    Mongoose : MongoDB Driver / ODM(Object Data Modelling)
+    Schema / Models
+    
+
+
+
+
+*/
