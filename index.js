@@ -7,6 +7,34 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 
+// Users Collections 
+// 1.FirstName
+// 2.LastName
+// 3.Email
+// 4.PhoneNumber
+
+// .model - Define Schema for collection's document
+/*
+- Model Name : Pascalcase, Singular
+- Collection Name : Lowercase, Pural
+
+
+*/
+
+const User = mongoose.model('User',{
+    firstName: String,
+    lastName: String,
+    email: String,
+    phoneNumber: Number
+})
+
+const Book = mongoose.model('Book',{
+    bookName: String,
+    authorName: String,
+    price: Number
+})
+
+
 // Define a route for the root URL
 app.get('/', (req, res) => {
     res.send('We are going to connect MongoDB to NodeJS Server');
@@ -31,3 +59,5 @@ app.listen(process.env.PORT,()=>{
         .then(()=> console.log('Server is Running :)'))
         .catch((error) => console.log(error));
 });
+
+
