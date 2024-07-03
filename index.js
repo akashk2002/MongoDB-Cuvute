@@ -13,14 +13,21 @@ app.get('/', (req, res) => {
 });
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(process.env.MongoURL)
-.then(() => {
-    console.log('DB Connected Successfully :)');
-}).catch((error) => {
-    console.error('DB Connection Error:', error);
-});
+// mongoose.connect(process.env.MongoURL)
+// .then(() => {
+//     console.log('DB Connected Successfully :)');
+// }).catch((error) => {
+//     console.error('DB Connection Error:', error);
+// });
 
-// Start the Express server
-app.listen(process.env.PORT, () => {
-    console.log('Server is running on port');
+// // Start the Express server
+// app.listen(process.env.PORT, () => {
+//     console.log('Server is running on port');
+// });
+
+app.listen(process.env.PORT,()=>{
+    mongoose
+        .connect(process.env.MongoURL)
+        .then(()=> console.log('Server is Running :)'))
+        .catch((error) => console.log(error));
 });
