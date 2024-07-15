@@ -35,6 +35,31 @@ app.get('/', (req, res) => {
     res.send('We are going to connect MongoDB to NodeJS Server');
 });
 
+// Fetching Details from Database -  READ: GET/users
+app.get('/users', async (req,res) =>{
+    try{
+        const users = await User.find()
+        res.json({
+            status: 'SUCCESS',
+            data: users
+        })
+
+    } catch(error){
+        res.json({
+            status: 'FAILED',
+            message: 'Something Went Wrong'
+        })
+
+    }
+    
+});
+
+
+
+
+
+
+
 // Connect to MongoDB using Mongoose
 // mongoose.connect(process.env.MongoURL)
 // .then(() => {
