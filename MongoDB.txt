@@ -31,6 +31,12 @@ MongoDB
     -  (U)Update - PATHCH - .patch()
     -  (D)Delete - DELETE - .delete()
 
+# Mongoose Methods
+    - POST : create()
+    - GET : find()
+    - Update : findByIdAndUpdate()
+    - Delete : findByIdAndDelete()
+
 -   Eg:
     -   Students
         - Read : Get the list of all students - /students
