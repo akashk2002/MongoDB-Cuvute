@@ -18,7 +18,6 @@ const app = express();
 - Model Name : Pascalcase, Singular
 - Collection Name : Lowercase, Pural
 
-
 */
 
 const User = mongoose.model('User',{
