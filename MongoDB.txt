@@ -32,10 +32,10 @@ MongoDB
     -  (D)Delete - DELETE - .delete()
 
 # Mongoose Methods
-    - POST : create()
-    - GET : find()
-    - Update : findByIdAndUpdate()
-    - Delete : findByIdAndDelete()
+    - GET : .find()
+    - POST : .create()
+    - Update : .findByIdAndUpdate()
+    - Delete : .findByIdAndDelete()
 
 -   Eg:
     -   Students
