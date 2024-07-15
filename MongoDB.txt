@@ -33,7 +33,7 @@ MongoDB
 
 -   Eg:
     -   Students
-        - Read : Get the list of all students
-        - Create : Add a new student
-        - Update : Update the details of a student
-        - Delete : Delete the student fron the school DB
+        - Read : Get the list of all students - /students
+        - Create : Add a new student - /students + data
+        - Update : Update the details of a student - /students/:id+data
+        - Delete : Delete the student fron the school DB - /students/:id
