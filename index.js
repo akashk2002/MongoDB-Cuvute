@@ -63,13 +63,16 @@ app.get('/users', async (req,res) =>{
 app.post('/users', async (req,res) =>{
     try{
         console.log(req.body); 
-        // const {firstName, lastName, email, phoneNumber} = req.body;
-        // await User.create({
+        const {firstName, lastName, email, phoneNumber} = req.body;
+        await User.create({firstName, lastName, email, phoneNumber
+            
         //     firstName: 'Dhruvitha',
         //     lastName: 'Kanyadhara',
         //     email: 'dhruv@GamepadHapticActuator.com',
         //     phoneNumber: 9878890897
-        // })
+        //
+        
+        })
         res.json({
             status: 'SUCCESS',
             message: 'User Created Successfully'
