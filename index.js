@@ -109,6 +109,26 @@ app.patch('/users/:id', async (req,res) =>{
 
 });
 
+// Delete User data from Database using ID - DELETE: DELETE - /users/:id
+app.delete('/users/:id', async (req,res) =>{
+    try{
+        const {id} = req.params;
+        // const {firstName, lastName, email, phoneNumber} = req.body;
+        await User.findByIdAndDelete(id)
+    res.json({
+        status: 'SUCCESS',
+        message: 'User Deleted Successfully'
+    })
+
+} catch(error){
+    res.json({
+        status: 'FAILED',
+        message: 'Something Went Wrong'
+    })
+
+}
+
+});
 
 
 
