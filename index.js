@@ -2,10 +2,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 dotenv.config();
+
 
 // Initialize Express app
 const app = express();
+
+app.use(bodyParser.urlencoded())    // bodyparser is a middleware to get form data
 
 // Users Collections 
 // 1.FirstName
@@ -42,6 +46,33 @@ app.get('/users', async (req,res) =>{
         res.json({
             status: 'SUCCESS',
             data: users
+        })
+
+    } catch(error){
+        res.json({
+            status: 'FAILED',
+            message: 'Something Went Wrong'
+        })
+
+    }
+    
+});
+
+
+// Adding new user into database - CREATE: POST - /users
+app.post('/users', async (req,res) =>{
+    try{
+        console.log(req.body); 
+        // const {firstName, lastName, email, phoneNumber} = req.body;
+        // await User.create({
+        //     firstName: 'Dhruvitha',
+        //     lastName: 'Kanyadhara',
+        //     email: 'dhruv@GamepadHapticActuator.com',
+        //     phoneNumber: 9878890897
+        // })
+        res.json({
+            status: 'SUCCESS',
+            message: 'User Created Successfully'
         })
 
     } catch(error){

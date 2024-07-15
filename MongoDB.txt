@@ -43,3 +43,6 @@ MongoDB
         - Create : Add a new student - /students + data
         - Update : Update the details of a student - /students/:id+data
         - Delete : Delete the student fron the school DB - /students/:id
+
+Middleware 
+    - body-parser : parse incoming request bodies in a middleware before your handlers, available under the req.body property
