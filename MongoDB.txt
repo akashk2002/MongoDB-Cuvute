@@ -25,7 +25,7 @@ MongoDB
 */
 
 # REST API's : CRUD Operations, HTTP Methods
-    Crud Operations
+    Crud Operations - HTTP Methods
     -  (C)Create - POST - .post()
     -  (R)Read - GET - .get()
     -  (U)Update - PATHCH - .patch()

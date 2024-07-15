@@ -88,6 +88,26 @@ app.post('/users', async (req,res) =>{
     
 });
 
+// Update the details in the Database - UPDATE: PATCH - /users
+app.patch('/users/:id', async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const {firstName, lastName, email, phoneNumber} = req.body;
+        await User.findByIdAndUpdate(id, {firstName, lastName, email, phoneNumber})
+    res.json({
+        status: 'SUCCESS',
+        message: 'User Updated Successfully'
+    })
+
+} catch(error){
+    res.json({
+        status: 'FAILED',
+        message: 'Something Went Wrong'
+    })
+
+}
+
+});
 
 
 
