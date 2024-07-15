@@ -17,9 +17,23 @@ Database(DB) : Permanent Storage
 MongoDB
     Mongoose : MongoDB Driver / ODM(Object Data Modelling)
     Schema / Models
-    
 
 
+     
 
 
 */
+
+# REST API's : CRUD Operations, HTTP Methods
+    Crud Operations
+    -  (C)Create - POST - .post()
+    -  (R)Read - GET - .get()
+    -  (U)Update - PATHCH - .patch()
+    -  (D)Delete - DELETE - .delete()
+
+-   Eg:
+    -   Students
+        - Read : Get the list of all students
+        - Create : Add a new student
+        - Update : Update the details of a student
+        - Delete : Delete the student fron the school DB

@@ -27,6 +27,13 @@ const User = mongoose.model('User',{
     phoneNumber: Number
 })
 
+const Student = mongoose.model('Student',{
+    firstName: String,
+    lastName: String,
+    email: String,
+    phoneNumber: Number
+})
+
 const Book = mongoose.model('Book',{
     bookName: String,
     authorName: String,
